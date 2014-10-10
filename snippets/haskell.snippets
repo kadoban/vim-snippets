@@ -45,9 +45,12 @@ snippet class
 	class ${1:Class} a where
 		${0}
 snippet module
-	module `substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')` (
+	module `substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')`
+    ( ${1}
 	) where
-	`expand('%') =~ 'Main' ? "\nmain :: IO ()\nmain = undefined" : ""`
+
+
+	`expand('%') =~ 'Main' ? "main :: IO ()\nmain = " : ""`${2}
 
 snippet main
 	main :: IO ()
