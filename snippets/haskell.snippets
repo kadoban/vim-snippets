@@ -8,13 +8,12 @@ snippet inline
 	{-# INLINE ${0:name} #-}
 snippet info
 	-- |
-	-- Module      :  ${1:`substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')`}
-	-- Copyright   :  ${2:Author} ${3:2011-2012}
-	-- License     :  ${4:BSD3}
+	-- Module      :  ${1:Module.Namespace}
+	-- Copyright   :  Joshua Simmons 2015
+	-- License     :  ${2:BSD3}
 	--
-	-- Maintainer  :  ${5:email@something.com}
-	-- Stability   :  ${6:experimental}
-	-- Portability :  ${7:unknown}
+	-- Maintainer  :  joshua.simmons@emptypath.com
+	-- Stability   :  ${3:experimental}
 	--
 	-- ${0:Description}
 	--
